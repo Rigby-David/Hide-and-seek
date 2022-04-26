@@ -35,31 +35,35 @@ boulderButton.addEventListener('click', () => {
     handleGuess(answer, 'boulder');
 });
 
-function handleGuess(correctSpot, userGuess) {
-    // reset the styles
+const resetStyles = () => {
     shedContainer.classList.remove('face');
     treeContainer.classList.remove('face');
     boulderContainer.classList.remove('face');
+};
+
+function handleGuess(correctSpot, userGuess) {
+    // reset the styles
+    resetStyles();
     // then increment the guesses
-
-    // const correctAnswerEl = document.getElementById(`${correctSpot}-container`);
-    // if (userGuess === correctSpot) {
-    //     correctAnswerEl.classList.add('face');
-    // } else {
-    //     correctAnswerEl.classList.add('face');
-    // }
-
     const correctAnswer = document.getElementById(`${correctSpot}-container`);
-
     if (correctSpot === userGuess) {
         correctGuesses++;
         totalGuesses++;
     }
     correctAnswer.classList.add('face');
-    // if (userGuess === true || userGuess === false) {
+    
+     // then if the user guess is correct, increment the correct guesses
+    // // then grab the appropriate container element for the correct guess from the DOM
+    
+    // then add the face class to that element so that the face shows up
+    
+
+    // update the DOM to show this change to the user (including the losses, not tracked directly in state)
+
+}
+   // if (userGuess === true || userGuess === false) {
     //     totalGuesses++;
     // }
-    // // then grab the appropriate container element for the correct guess from the DOM
     // if (correctSpot === userGuess) {
     //     correctGuesses++;
     //     totalGuesses++;
@@ -70,12 +74,14 @@ function handleGuess(correctSpot, userGuess) {
     // }
     
     // const randomContainer
-    // then add the face class to that element so that the face shows up
-    // shedContainer.classList.add('face');
-    // if (correctSpot === 3) {
-        // then if the user guess is correct, increment the correct guesses
+      // if (correctSpot === 3) {
     //     correctGuesses++;
     // }
-    // update the DOM to show this change to the user (including the losses, not tracked directly in state)
-
-}
+    // shedContainer.classList.add('face');
+    
+    // const correctAnswerEl = document.getElementById(`${correctSpot}-container`);
+    // if (userGuess === correctSpot) {
+    //     correctAnswerEl.classList.add('face');
+    // } else {
+    //     correctAnswerEl.classList.add('face');
+    // }
