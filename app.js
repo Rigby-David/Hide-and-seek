@@ -42,19 +42,27 @@ function handleGuess(correctSpot, userGuess) {
     boulderContainer.classList.remove('face');
     // then increment the guesses
 
-    const correctAnswerEl = document.getElementById(`${correctSpot}-container`);
-    if (userGuess === correctSpot) {
-        correctAnswerEl.classList.add('face');
-    } else {
-        correctAnswerEl.classList.add('face');
-    }
+    // const correctAnswerEl = document.getElementById(`${correctSpot}-container`);
+    // if (userGuess === correctSpot) {
+    //     correctAnswerEl.classList.add('face');
+    // } else {
+    //     correctAnswerEl.classList.add('face');
+    // }
 
+    const correctAnswer = document.getElementById(`${correctSpot}-container`);
+
+    if (correctSpot === userGuess) {
+        correctGuesses++;
+        totalGuesses++;
+    }
+    correctAnswer.classList.add('face');
     // if (userGuess === true || userGuess === false) {
     //     totalGuesses++;
     // }
     // // then grab the appropriate container element for the correct guess from the DOM
-    // if (userGuess === correctSpot) {
+    // if (correctSpot === userGuess) {
     //     correctGuesses++;
+    //     totalGuesses++;
     // } else if (userGuess === false) {
     //     totalGuesses++;
     // } else {
