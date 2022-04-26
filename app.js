@@ -41,6 +41,12 @@ const resetStyles = () => {
     boulderContainer.classList.remove('face');
 };
 
+const displayResults = () => {
+    totalEl.textContent = total;
+    lossesEl.textContent = losses;
+    winsEl.textContent = wins;
+}
+
 function handleGuess(correctSpot, userGuess) {
     // reset the styles
     resetStyles();
@@ -51,7 +57,11 @@ function handleGuess(correctSpot, userGuess) {
         totalGuesses++;
     }
     correctAnswer.classList.add('face');
-    
+    // if (correctSpot === 1) {
+    //     treeContainer.add('face');
+    //     correctGuess++;
+    // }
+    displayResults();
      // then if the user guess is correct, increment the correct guesses
     // // then grab the appropriate container element for the correct guess from the DOM
     
