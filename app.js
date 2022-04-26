@@ -41,10 +41,25 @@ function handleGuess(correctSpot, userGuess) {
     treeContainer.classList.remove('face');
     boulderContainer.classList.remove('face');
     // then increment the guesses
-    if (userGuess === true || userGuess === false) {
-        totalGuesses++;
+
+    const correctAnswerEl = document.getElementById(`${correctSpot}-container`);
+    if (userGuess === correctSpot) {
+        correctAnswerEl.classList.add('face');
+    } else {
+        correctAnswerEl.classList.add('face');
     }
-    // then grab the appropriate container element for the correct guess from the DOM
+
+    // if (userGuess === true || userGuess === false) {
+    //     totalGuesses++;
+    // }
+    // // then grab the appropriate container element for the correct guess from the DOM
+    // if (userGuess === correctSpot) {
+    //     correctGuesses++;
+    // } else if (userGuess === false) {
+    //     totalGuesses++;
+    // } else {
+    //     totalGuesses++;
+    // }
     
     // const randomContainer
     // then add the face class to that element so that the face shows up
