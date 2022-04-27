@@ -45,7 +45,7 @@ const displayResults = () => {
     totalEl.textContent = totalGuesses;
     lossesEl.textContent = `${totalGuesses - correctGuesses}`;
     winsEl.textContent = correctGuesses;
-}
+};
 
 function handleGuess(correctSpot, userGuess) {
     // reset the styles
