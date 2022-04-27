@@ -52,11 +52,12 @@ function handleGuess(correctSpot, userGuess) {
     resetStyles();
     // then increment the guesses
     const correctAnswer = document.getElementById(`${correctSpot}-container`);
+    totalGuesses++;
     if (correctSpot === userGuess) {
         correctGuesses++;
-        totalGuesses++;
+        correctAnswer.classList.add('face');           
     }
-    correctAnswer.classList.add('face');
+    
     // if (correctSpot === 1) {
     //     treeContainer.add('face');
     //     correctGuess++;
