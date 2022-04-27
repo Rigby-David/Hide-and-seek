@@ -42,9 +42,9 @@ const resetStyles = () => {
 };
 
 const displayResults = () => {
-    totalEl.textContent = total;
-    lossesEl.textContent = losses;
-    winsEl.textContent = wins;
+    totalEl.textContent = totalGuesses;
+    lossesEl.textContent = `${totalGuesses - correctGuesses}`;
+    winsEl.textContent = correctGuesses;
 }
 
 function handleGuess(correctSpot, userGuess) {
