@@ -48,51 +48,20 @@ const displayResults = () => {
 };
 
 function handleGuess(correctSpot, userGuess) {
-    // reset the styles
     resetStyles();
-    // then increment the guesses
     const correctAnswer = document.getElementById(`${correctSpot}-container`);
     totalGuesses++;
     if (correctSpot === userGuess) {
         correctGuesses++;
         correctAnswer.classList.add('face');           
+    } else {
+        correctAnswer.classList.add('face');
     }
-    
-    // if (correctSpot === 1) {
-    //     treeContainer.add('face');
-    //     correctGuess++;
-    // }
     displayResults();
-     // then if the user guess is correct, increment the correct guesses
-    // // then grab the appropriate container element for the correct guess from the DOM
-    
-    // then add the face class to that element so that the face shows up
-    
-
-    // update the DOM to show this change to the user (including the losses, not tracked directly in state)
-
 }
-   // if (userGuess === true || userGuess === false) {
-    //     totalGuesses++;
-    // }
-    // if (correctSpot === userGuess) {
-    //     correctGuesses++;
-    //     totalGuesses++;
-    // } else if (userGuess === false) {
-    //     totalGuesses++;
-    // } else {
-    //     totalGuesses++;
-    // }
-    
-    // const randomContainer
-      // if (correctSpot === 3) {
-    //     correctGuesses++;
-    // }
-    // shedContainer.classList.add('face');
-    
-    // const correctAnswerEl = document.getElementById(`${correctSpot}-container`);
-    // if (userGuess === correctSpot) {
-    //     correctAnswerEl.classList.add('face');
-    // } else {
-    //     correctAnswerEl.classList.add('face');
-    // }
+// reset the s 
+    // then increment the guessestyles
+    // then if the user guess is correct, increment the correct guesses
+    // // then grab the appropriate container element for the correct guess from the DOM
+    // then add the face class to that element so that the face shows up
+    // update the DOM to show this change to the user (including the losses, not tracked directly in state)
