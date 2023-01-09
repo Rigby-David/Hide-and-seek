@@ -11,6 +11,17 @@ const totalEl = document.getElementById('total');
 const lossesEl = document.getElementById('losses');
 const winsEl = document.getElementById('wins');
 
+// pre-app increment
+const incrementButton = document.getElementById('increment');
+const displayIncrement = document.getElementById('display');
+
+let incrementTotal = 0;
+
+incrementButton.addEventListener('click', () => {
+    incrementTotal++;
+    displayIncrement.textContent = incrementTotal;
+});
+
 // initialize state
 const hidingPlaces = ['tree', 'shed', 'boulder'];
 
@@ -35,11 +46,21 @@ boulderButton.addEventListener('click', () => {
     handleGuess(answer, 'boulder');
 });
 
+function resetStyles() {
+    shedContainer.classList.remove('face');
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
+}
+
 function handleGuess(correctSpot, userGuess) {
     // reset the styles
+    resetStyles();
     // then increment the guesses
+    totalGuesses++;
     // then grab the appropriate container element for the correct guess from the DOM
     // then add the face class to that element so that the face shows up
+    winsEl.classList.add('face');
     // then if the user guess is correct, increment the correct guesses
+
     // update the DOM to show this change to the user (including the losses, not tracked directly in state)
 }
